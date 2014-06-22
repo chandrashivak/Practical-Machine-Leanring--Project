@@ -59,6 +59,19 @@ Detection Prevalence   0.2845   0.1935   0.1743   0.1639   0.1837
 Balanced Accuracy      0.9893   0.9824   0.9630   0.9798   0.9909
 
 ```
+### Discussion
+For completeness, We also study how the data partitioning as well as the PCA affect the algorithm accuracy.
+
+Figure 2 plots accuracy on the cross validation set versus the partition ratio and shows that a factor of 0.6 yields a close-to-optimal performance. This is also the case that offers a reasonably good trade-off between accuracy and computation time as well.
+![](plot2.png)
+
+**Figure 2** Accuracy versus the partition ratio.
+
+Figure 3 plots accuracy on the cross validation set versus the PCA threshold and shows that a factor of 0.9 yields a close-to-optimal performance. Increasing the PCA threshold further does better but is also more computationally complex since the predictors dimensionality increases.
+![](plot3.png)
+
+**Figure 3** Accuracy versus the PCA threshold.
+
 The detailed code used for prediction is given below.
 ```
 library(caret)
